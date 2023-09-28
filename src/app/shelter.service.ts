@@ -11,6 +11,12 @@ export interface MonkeyDto {
   Registered?: string,
   FavoriteFruit: string
 }
+
+export interface SpeciesDto {
+  Species: string,
+  Count: number
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -35,5 +41,14 @@ export class ShelterService {
 
   updateMonkey(id : string, weight : number) {
     return this.http.put<MonkeyDto>(`http://localhost:44334/api/Monkeys/${id}?weight=${weight}`, weight);
+  }
+
+  getSpecies() {
+    return this.http.get<SpeciesDto[]>("http://localhost:44334/api/species");
+  }
+
+  getSpeciesByDate(startDate : string, endDate : string) {
+
+    return this.http.get<SpeciesDto[]>(`http://localhost:44334/api/species/?startDate=${startDate}&endDate=${endDate}`)
   }
 }

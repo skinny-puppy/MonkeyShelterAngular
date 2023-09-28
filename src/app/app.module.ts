@@ -14,28 +14,39 @@ import {MatButtonModule} from "@angular/material/button";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { DeleteMonkeyComponent } from './delete-monkey/delete-monkey.component';
 import { UpdateMonkeyComponent } from './update-monkey/update-monkey.component';
+import { ReportSpeciesComponent } from './report-species/report-species.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatNativeDateModule} from "@angular/material/core";
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateMonkeyComponent,
     DeleteMonkeyComponent,
-    UpdateMonkeyComponent
+    UpdateMonkeyComponent,
+    ReportSpeciesComponent,
+    NavigationComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    MatListModule,
-    MatTableModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatSelectModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        MatListModule,
+        MatTableModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatSelectModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        BrowserAnimationsModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatDatepickerModule,
+        MatNativeDateModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
