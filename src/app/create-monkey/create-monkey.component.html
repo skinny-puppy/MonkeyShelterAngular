@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field><input formControlName="Name" matInput placeholder="Enter monkey's name"></mat-form-field>
+  <mat-form-field><input formControlName="Age" matInput placeholder="Enter monkey's age"></mat-form-field>
+    <mat-form-field><input formControlName="Weight" matInput placeholder="Enter monkey's weight"></mat-form-field>
+      <mat-form-field><input formControlName="EyeColor" matInput placeholder="Enter monkey's eye color"></mat-form-field>
+  <div><mat-select formControlName="Species" placeholder="Species">
+    <mat-option *ngFor="let specie of species" [value]="specie">
+      {{ specie }}
+    </mat-option>
+  </mat-select></div>
+        <mat-form-field><input formControlName="FavoriteFruit" matInput placeholder="Enter monkey's favorite fruit"></mat-form-field>
+          <div><button mat-button type="submit">Submit</button></div>
+</form>
+

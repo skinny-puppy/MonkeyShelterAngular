@@ -1,0 +1,5 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field><input formControlName="Id" matInput placeholder="Enter monkey's id"></mat-form-field>
+  <mat-form-field><input formControlName="Weight" matInput placeholder="Enter monkey's weight"></mat-form-field>
+  <div><button mat-button type="submit">Submit</button></div>
+</form>
