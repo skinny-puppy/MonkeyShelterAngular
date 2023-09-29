@@ -19,6 +19,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatNativeDateModule} from "@angular/material/core";
 import { NavigationComponent } from './navigation/navigation.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { NavigationComponent } from './navigation/navigation.component';
         MatDatepickerModule,
         MatFormFieldModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatToolbarModule
     ],
   providers: [],
   bootstrap: [AppComponent]
